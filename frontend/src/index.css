@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-paper text-ink font-body;
+}
+
+h1, h2, h3, h4 {
+  @apply font-display;
+}
+
+.lane {
+  height: 3px;
+  background-image: repeating-linear-gradient(
+    90deg,
+    #16211b 0,
+    #16211b 18px,
+    transparent 18px,
+    transparent 34px
+  );
+  opacity: 0.18;
+}
+
+.card {
+  @apply bg-white rounded-xl border border-ink/10 shadow-sm;
+}
+
+.btn-primary {
+  @apply bg-ink text-paper px-5 py-2.5 rounded-lg font-medium hover:bg-route transition-colors duration-150;
+}
+
+.btn-outline {
+  @apply border border-ink/20 text-ink px-5 py-2.5 rounded-lg font-medium hover:border-ink transition-colors duration-150;
+}
+
+.input-field {
+  @apply w-full px-4 py-2.5 rounded-lg border border-ink/15 bg-white focus:outline-none focus:ring-2 focus:ring-route/40 focus:border-route;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #16211b33;
+  border-radius: 4px;
+}
